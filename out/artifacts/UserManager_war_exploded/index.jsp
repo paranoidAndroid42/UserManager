@@ -64,10 +64,11 @@
             <table align="center">
                 <tbody>
                 <tr>
-                    <th>NAME</th>
-                    <th>LAST NAME</th>
-                    <th>EDIT</th>
-                    <th>DELETE</th>
+                    <th>     NAME       </th>
+                    <th>     LAST NAME  </th>
+                    <th>     PHONE      </th>
+                    <th>     EDIT       </th>
+                    <th>     DELETE     </th>
                 </tr>
                 <c:forEach items="${sessionScope.users}" var="users">
                     <tr>

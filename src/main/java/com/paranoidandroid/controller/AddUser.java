@@ -26,7 +26,8 @@ public class AddUser extends HttpServlet {
 
         MongoUserController mongoUserController = new MongoUserController(mongo);   //connect mongo controller
 
-        mongoUserController.AddUser(user);   //add user
+        if((user.getName()!=null || ! !"".equals(user.getName() )) && (user.getLastName()!=null || !"".equals(user.getLastName())))
+              mongoUserController.AddUser(user);   //add user
 
         List<User> users  = mongoUserController.getUsers(); //read all users
 

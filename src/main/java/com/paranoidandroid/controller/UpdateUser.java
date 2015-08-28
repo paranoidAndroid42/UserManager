@@ -30,6 +30,7 @@ public class UpdateUser extends HttpServlet {
         user.setlastName(request.getParameter("editLastName"));   //get user
         user.setTelNumber(request.getParameter("editPhone"));
 
+        if((user.getName()!=null || ! !"".equals(user.getName() )) && (user.getLastName()!=null || !"".equals(user.getLastName())))
         mongoUserController.UpdateUser(user);  //update user
 
         List<User> users  = mongoUserController.getUsers();  //read all user
